@@ -1,10 +1,18 @@
-def reverse(num):
-  rev = 0
-  while num > 0:
-    rev = (10*rev) + num%10
-    num //= 10
-  return rev
-print reverse(67)
+def reverse(input):
+	
+	# split words of string separated by space
+	Words = input.split(" ")
 
+	# reverse list of words
+	Words=Words[-1::-1]
 
+	# now join words with space
+	rev = ' '.join(Words)
+	
+	return rev
 
+if __name__ == "__main__":
+	input = "the sky is blue"
+	print reverse(input)
+
+  
